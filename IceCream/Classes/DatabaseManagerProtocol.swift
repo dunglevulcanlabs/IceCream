@@ -47,7 +47,13 @@ extension DatabaseManager {
         syncObjects.forEach {
             $0.pipeToEngine = { [weak self] recordsToStore, recordIDsToDelete in
                 guard let self = self else { return }
-                self.syncRecordsToCloudKit(recordsToStore: recordsToStore, recordIDsToDelete: recordIDsToDelete)
+                self.syncRecordsToCloudKit(recordsToStore: recordsToStore, recordIDsToDelete: recordIDsToDelete) { error in
+                    guard error == nil else {
+                        return
+                    }
+                    
+                    NotificationCenter.default.post(name: Notifications.cloudKitDataSyncRecordsSuccess.name, object: nil)
+                }
             }
         }
     }
