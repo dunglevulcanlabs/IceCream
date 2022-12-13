@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 48;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -20,6 +20,13 @@
 		0DF861D822D0563700B20AEA /* PublicDatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673B1E6D2273EECF00EB4FEE /* PublicDatabaseManager.swift */; };
 		0DF861D922D0563800B20AEA /* PublicDatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673B1E6D2273EECF00EB4FEE /* PublicDatabaseManager.swift */; };
 		0DF861DA22D0563800B20AEA /* PublicDatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673B1E6D2273EECF00EB4FEE /* PublicDatabaseManager.swift */; };
+		0E6AA049294828A300362CE8 /* libc++.1.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E6AA0482948289E00362CE8 /* libc++.1.tbd */; };
+		0E6AA04B294828AE00362CE8 /* libcompression.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E6AA04A294828A900362CE8 /* libcompression.tbd */; };
+		0E6AA04E294828CC00362CE8 /* RealmSwift.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E6AA04C294828CC00362CE8 /* RealmSwift.xcframework */; };
+		0E6AA04F294828CC00362CE8 /* RealmSwift.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0E6AA04C294828CC00362CE8 /* RealmSwift.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0E6AA050294828CC00362CE8 /* Realm.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E6AA04D294828CC00362CE8 /* Realm.xcframework */; };
+		0E6AA051294828CD00362CE8 /* Realm.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0E6AA04D294828CC00362CE8 /* Realm.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0E6AA054294828DA00362CE8 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E6AA053294828D600362CE8 /* libz.tbd */; };
 		41767BFD209863BA00178513 /* SyncEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41767BFC209863BA00178513 /* SyncEngine.swift */; };
 		474FF0E32284B6F700921CF6 /* BackgroundWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474FF0E22284B6F700921CF6 /* BackgroundWorker.swift */; };
 		474FF0E42284B72400921CF6 /* BackgroundWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474FF0E22284B6F700921CF6 /* BackgroundWorker.swift */; };
@@ -63,8 +70,6 @@
 		6773DF0020BD2CBD0019FF3A /* CKRecordRecoverable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6773DEFE20BD2CBD0019FF3A /* CKRecordRecoverable.swift */; };
 		6773DF0120BD2CBD0019FF3A /* CKRecordConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6773DEFF20BD2CBD0019FF3A /* CKRecordConvertible.swift */; };
 		6773DF0320BD2CE20019FF3A /* Syncable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6773DF0220BD2CE10019FF3A /* Syncable.swift */; };
-		67FE320F202B505000125432 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67FE320E202B505000125432 /* Realm.framework */; };
-		67FE3211202B505600125432 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67FE3210202B505600125432 /* RealmSwift.framework */; };
 		D826ADC8212189F2002B5C0F /* Syncable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6773DF0220BD2CE10019FF3A /* Syncable.swift */; };
 		D826ADC9212189F2002B5C0F /* CKRecordConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6773DEFF20BD2CBD0019FF3A /* CKRecordConvertible.swift */; };
 		D826ADCA212189F2002B5C0F /* CKRecordRecoverable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6773DEFE20BD2CBD0019FF3A /* CKRecordRecoverable.swift */; };
@@ -78,8 +83,29 @@
 		D826ADD521218A1C002B5C0F /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D826ADD321218A1C002B5C0F /* Realm.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		0E6AA052294828CD00362CE8 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				0E6AA04F294828CC00362CE8 /* RealmSwift.xcframework in Embed Frameworks */,
+				0E6AA051294828CD00362CE8 /* Realm.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		0D695059260CF0DA0039A9A8 /* PendingRelationshipsWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PendingRelationshipsWorker.swift; sourceTree = "<group>"; };
+		0E6AA0462948288700362CE8 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/lib/libc++.tbd"; sourceTree = DEVELOPER_DIR; };
+		0E6AA0482948289E00362CE8 /* libc++.1.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.1.tbd"; path = "Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/lib/libc++.1.tbd"; sourceTree = DEVELOPER_DIR; };
+		0E6AA04A294828A900362CE8 /* libcompression.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libcompression.tbd; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/lib/libcompression.tbd; sourceTree = DEVELOPER_DIR; };
+		0E6AA04C294828CC00362CE8 /* RealmSwift.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = RealmSwift.xcframework; path = Carthage/Build/RealmSwift.xcframework; sourceTree = "<group>"; };
+		0E6AA04D294828CC00362CE8 /* Realm.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Realm.xcframework; path = Carthage/Build/Realm.xcframework; sourceTree = "<group>"; };
+		0E6AA053294828D600362CE8 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/lib/libz.tbd; sourceTree = DEVELOPER_DIR; };
 		41767BFC209863BA00178513 /* SyncEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncEngine.swift; sourceTree = "<group>"; };
 		474FF0E22284B6F700921CF6 /* BackgroundWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundWorker.swift; sourceTree = "<group>"; };
 		673B1E6B2273EECE00EB4FEE /* DatabaseManagerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseManagerProtocol.swift; sourceTree = "<group>"; };
@@ -115,8 +141,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				67FE320F202B505000125432 /* Realm.framework in Frameworks */,
-				67FE3211202B505600125432 /* RealmSwift.framework in Frameworks */,
+				0E6AA049294828A300362CE8 /* libc++.1.tbd in Frameworks */,
+				0E6AA050294828CC00362CE8 /* Realm.xcframework in Frameworks */,
+				0E6AA04E294828CC00362CE8 /* RealmSwift.xcframework in Frameworks */,
+				0E6AA04B294828AE00362CE8 /* libcompression.tbd in Frameworks */,
+				0E6AA054294828DA00362CE8 /* libz.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -205,6 +234,12 @@
 		67FE320D202B505000125432 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0E6AA053294828D600362CE8 /* libz.tbd */,
+				0E6AA04D294828CC00362CE8 /* Realm.xcframework */,
+				0E6AA04C294828CC00362CE8 /* RealmSwift.xcframework */,
+				0E6AA04A294828A900362CE8 /* libcompression.tbd */,
+				0E6AA0482948289E00362CE8 /* libc++.1.tbd */,
+				0E6AA0462948288700362CE8 /* libc++.tbd */,
 				67478171213BEF2A005C132B /* Realm.framework */,
 				67478172213BEF2A005C132B /* RealmSwift.framework */,
 				67478162213BEE0D005C132B /* Realm.framework */,
@@ -263,6 +298,7 @@
 				6743F70E202B0F0F00912163 /* Frameworks */,
 				6743F70F202B0F0F00912163 /* Headers */,
 				6743F710202B0F0F00912163 /* Resources */,
+				0E6AA052294828CD00362CE8 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -608,7 +644,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -633,7 +670,11 @@
 				INFOPLIST_OUTPUT_FORMAT = binary;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = me.soledad.http.IceCream;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -659,7 +700,11 @@
 				INFOPLIST_OUTPUT_FORMAT = binary;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = me.soledad.http.IceCream;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -686,7 +731,11 @@
 				);
 				INFOPLIST_FILE = IceCream/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = me.soledad.http.IceCream;
 				PRODUCT_NAME = IceCream;
 				SDKROOT = watchos;
@@ -715,7 +764,11 @@
 				);
 				INFOPLIST_FILE = IceCream/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = me.soledad.http.IceCream;
 				PRODUCT_NAME = IceCream;
 				SDKROOT = watchos;
@@ -743,7 +796,11 @@
 				);
 				INFOPLIST_FILE = IceCream/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = me.soledad.http.IceCream;
 				PRODUCT_NAME = IceCream;
 				SDKROOT = appletvos;
@@ -771,7 +828,11 @@
 				);
 				INFOPLIST_FILE = IceCream/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = me.soledad.http.IceCream;
 				PRODUCT_NAME = IceCream;
 				SDKROOT = appletvos;
@@ -803,7 +864,11 @@
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = IceCream/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				PRODUCT_BUNDLE_IDENTIFIER = me.soledad.http.IceCream;
 				PRODUCT_NAME = IceCream;
@@ -834,7 +899,11 @@
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = IceCream/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				PRODUCT_BUNDLE_IDENTIFIER = me.soledad.http.IceCream;
 				PRODUCT_NAME = IceCream;
