@@ -48,11 +48,18 @@ extension DatabaseManager {
             $0.pipeToEngine = { [weak self] recordsToStore, recordIDsToDelete in
                 guard let self = self else { return }
                 self.syncRecordsToCloudKit(recordsToStore: recordsToStore, recordIDsToDelete: recordIDsToDelete) { error in
-                    guard error == nil else {
+                    guard let error = error else {
+                        NotificationCenter.default.post(name: Notifications.cloudKitDataSyncRecordsSuccess.name, object: nil)
                         return
                     }
-                    
-                    NotificationCenter.default.post(name: Notifications.cloudKitDataSyncRecordsSuccess.name, object: nil)
+                    switch ErrorHandler.shared.resultType(with: error) {
+                    case .recoverableError(_, let message):
+                        NotificationCenter.default.post(name: Notifications.cloudKitDataSyncRecordsFailed.name, object: nil, userInfo: ["error": error, "message": message])
+                    case .fail(_, let message):
+                        NotificationCenter.default.post(name: Notifications.cloudKitDataSyncRecordsFailed.name, object: nil, userInfo: ["error": error, "message": message])
+                    default:
+                        break
+                    }
                 }
             }
         }
@@ -138,7 +145,9 @@ extension DatabaseManager {
                     self.syncRecordsToCloudKit(recordsToStore: chunk, recordIDsToDelete: recordIDsToDelete, completion: completion)
                 }
             default:
-                return
+                DispatchQueue.main.async {
+                    completion?(error)
+                }
             }
         }
         
